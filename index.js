@@ -14,7 +14,7 @@ console.log('O bot ta funcionando ...');
 
 function BotInit() {
 	var query = {
-		q: "(corno corna)",
+		q: "(corno)",
 		result_type: "recent"
 	}
 
@@ -22,7 +22,7 @@ function BotInit() {
 
 	function BotGotLatestTweet (error, data, response) {
 		if (error) {
-			console.log('Bot não pôde achar o último tweet, : ' + error);
+			console.log('Bot não pôde achar o último tweet: ' + error);
 		}
 		else {
 			var id = {
@@ -33,10 +33,10 @@ function BotInit() {
 			
 			function BotRetweeted(error, response) {
 				if (error) {
-					console.log('Bot não pode retweetar, : ' + error);
+					console.log('Bot já retweetou: ' + error);
 				}
 				else {
-					console.log('Bot retweetou : ' + id.id);
+					console.log('Bot retweetou: ' + id.id);
 				}
 			}
 		}
@@ -44,3 +44,4 @@ function BotInit() {
 }
 
 BotInit();
+setInterval(BotInit, 5*60*1000); //5 minutos
