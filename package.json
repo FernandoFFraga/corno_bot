@@ -1,0 +1,16 @@
+{
+    "name": "bot_corno",
+    "version": "1.0.0",
+    "description": "Esse bot foi desenvolvido única e exclusivamente porque estamos entediados",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "echo \"Error: Deu ruim cria\" && exit 1"
+    },
+    "author": "Fernando Fraga e Anderson Asevedo",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "8.2.0",
+        "twit": "2.2.11"
+    }
+}
